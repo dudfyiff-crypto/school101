@@ -3,92 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Школьный сайт</title>
-    <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #f4f6fb; }
-    header { background: #2c3e50; color: white; padding: 20px; }
-    nav { display:flex; flex-wrap:wrap; gap:10px; }
-    nav a { color: white; text-decoration: none; font-weight: bold; }
-    .hero { padding: 40px; background: white; text-align: center; }
-    .sections { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 20px; }
-    .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    footer { background: #2c3e50; color: white; text-align: center; padding: 15px; }
-
-    /* 📱 Мобильная версия */
-    @media (max-width: 600px) {
-      header { text-align:center; }
-      nav { justify-content:center; }
-      .hero { padding: 20px; }
-      .sections { grid-template-columns: 1fr; padding: 10px; }
-      .card { padding: 15px; }
-      h1 { font-size: 22px; }
-      h2 { font-size: 20px; }
-    }
+  <title>Школа №101</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f5f7fb; }
+    header { background: #1e3a8a; color: white; padding: 20px; }
+    nav a { color: white; margin-right: 15px; text-decoration: none; font-weight: bold; }
+    .hero { padding: 60px 20px; text-align: center; background: #e0e7ff; }
+    .section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    footer { background: #1e293b; color: white; text-align: center; padding: 20px; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Средняя школа №123</h1>
-        <nav>
-      <a href="#">Главная</a>
-      <a href="#">О школе</a>
-      <a href="#">История</a>
-      <a href="#">Контакты</a>
+    <h1>Школа №101</h1>
+    <nav>
+      <a href="#about">О школе</a>
+      <a href="#news">Новости</a>
+      <a href="#teachers">Учителя</a>
+      <a href="#contact">Контакты</a>
     </nav>
   </header>
 
   <section class="hero">
     <h2>Добро пожаловать на сайт нашей школы!</h2>
-    <p>Здесь вы найдете новости, расписание и полезную информацию для учеников и родителей.</p>
+    <p>Знания сегодня — успех завтра.</p>
   </section>
 
-      <section class="sections">
-        <div class="card">
-      <h3>Фотогалерея</h3>
-      <p>Фотографии нашей школы и мероприятий:</p>
-      <div style="display:grid;grid-template-columns:1fr;gap:12px;">
-        <img src="https://avatars.mds.yandex.net/get-altay/2363990/2a0000017be2ab9394ced0a15786512918c5/orig/600x300?text=Фото+школы+1" style="width:100%;border-radius:12px;">
-        <img src="https://placehold.co/600x300?text=Фото+школы+2" style="width:100%;border-radius:12px;">
-        <img src="https://placehold.co/600x300?text=Фото+школы+3" style="width:100%;border-radius:12px;">
+  <section id="about" class="section">
+    <h2>О школе</h2>
+    <p>Наша школа — это современное образовательное учреждение с сильными традициями и инновационным подходом к обучению.</p>
+  </section>
+
+  <section id="news" class="section">
+    <h2>Новости</h2>
+    <div class="cards">
+      <div class="card">Открытие нового кабинета информатики</div>
+      <div class="card">Победа на городской олимпиаде</div>
+      <div class="card">День самоуправления в школе</div>
+    </div>
+  </section>
+
+  <section id="media" class="section">
+    <h2>Фото и видео</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="photo.jpeg" />
+        <p>Наш школьный двор</p>
       </div>
-    
-    <div class="card">
-      <h3>Наши достижения</h3>
-      <ul>
-        <li>🏆 Победы в городских олимпиадах</li>
-        <li>🥇 Призёры спортивных соревнований</li>
-        <li>🎓 Высокие результаты ЕНТ</li>
-      </ul>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250" alt="Класс" style="width:100%; border-radius:8px;" />
+        <p>Урок в классе</p>
+      </div>
+      <div class="card">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Видео школы" frameborder="0" allowfullscreen style="border-radius:8px;"></iframe>
+        <p>Видео о нашей школе</p>
+      </div>
     </div>
-        <div class="card">
-      <h3>О школе</h3>
-      <p>Наша школа — это современное образовательное учреждение с сильными традициями и дружной атмосферой. Мы обучаем учеников с 1 по 11 класс.</p>
+  </section>
+
+  <section id="teachers" class="section">
+    <h2>Наши учителя</h2>
+    <div class="cards">
+      <div class="card">Иванова О.А. — математика</div>
+      <div class="card">Петров И.С. — физика</div>
+      <div class="card">Сидорова М.В. — русский язык</div>
     </div>
-    <div class="card">
-      <h3>История школы</h3>
-      <p>Школа была основана в 1965 году. За годы работы она выпустила тысячи учеников, многие из которых стали врачами, инженерами, учёными и учителями.</p>
-      <p>Мы бережно храним традиции и постоянно развиваемся, внедряя современные технологии в обучение.</p>
-    </div>
-    <div class="card">
-      <h3>Контакты</h3>
-      <p><b>Адрес:</b> г. Примерск, ул. Школьная, 10</p>
-      <p><b>Телефон:</b> +7 (900) 777-77-77</p>
-      <p><b>Email:</b> school@example.ru</p>
-    </div>
-    <div class="card">
-      <h3>Интересные факты</h3>
-      <ul>
-        <li>Школе более 60 лет</li>
-        <li>В школе учатся более 1500 учеников</li>
-        <li>У нас есть свой музей и актовый залр</li>
-      </ul>
-    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Контакты</h2>
+    <p>Адрес: г. Москва, ул. Школьная, 10</p>
+    <p>Email: school123@mail.ru</p>
+    <p>Телефон: +7 (900) 123-45-67</p>
   </section>
 
   <footer>
-    <p>© 2026 Школа-гимназия №101</p>
+    <p>© 2026 Школа №123. Все права защищены.</p>
   </footer>
 </body>
 </html>
-
-
